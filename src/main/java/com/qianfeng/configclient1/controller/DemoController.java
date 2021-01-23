@@ -8,11 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     @Value("${foo}")
     private String foo;
-    @Value("${server.port}")
-    private  String  serverPort;
+ //  @Value("${server.port}")
+  //  private  String  serverPort;
+    @Value("${user.name}")
+    private String userName;
     @GetMapping("/hello")
     public String hello(){
-        return "Hello,这是"+foo +",server.poet = " +serverPort;
+     //   return "Hello,这是"+foo +",server.poet = " +serverPort;
+        return "你好：" + userName +"! foo =" + foo;
     }
 
 }
